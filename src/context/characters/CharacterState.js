@@ -11,10 +11,21 @@ const CharacterState = props => {
 
   const [state, dispatch] = useReducer(CharacterReducer, initialState);
 
+  const getCharacterLadder = async () => {
+    const res = await axios.get(
+      "http://api.pathofexile.com/ladders/Metamorph?limit=1"
+    );
+    console.log(res.data.entries);
+
+    dispatch({ type: SEARCH_CHARACTERS, payload: res.data.entries });
+  };
+
   return (
     <CharacterContext.Provider
-      value={{ users: state.users }}
-    ></CharacterContext.Provider>
+      value={{ users: state.users, getCharacterLadder }}
+    >
+      {props.children}
+    </CharacterContext.Provider>
   );
 };
 
