@@ -13,7 +13,7 @@ const CharacterState = props => {
 
   const getCharacterLadder = async () => {
     const res = await axios.get(
-      "http://api.pathofexile.com/ladders/Metamorph?limit=1"
+      "http://api.pathofexile.com/ladders/Metamorph?limit=10"
     );
     console.log(res.data.entries);
 
@@ -22,7 +22,7 @@ const CharacterState = props => {
 
   return (
     <CharacterContext.Provider
-      value={{ users: state.users, getCharacterLadder }}
+      value={{ characters: state.characters, getCharacterLadder }}
     >
       {props.children}
     </CharacterContext.Provider>
