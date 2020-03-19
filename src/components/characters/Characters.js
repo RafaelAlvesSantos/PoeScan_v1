@@ -11,7 +11,7 @@ const Characters = () => {
 
   const getCharacterLadder = async () => {
     const res = await axios.get(
-      "http://api.pathofexile.com/ladders/Metamorph?limit=3"
+      "http://api.pathofexile.com/ladders/Metamorph?limit=10"
     );
     setChars(res.data.entries);
   };
