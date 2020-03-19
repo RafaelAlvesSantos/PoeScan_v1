@@ -1,8 +1,10 @@
-import React, { Fragment } from "react";
-import Saboteur from "../layout/saboteurThumb.png";
+import React, { Fragment, useEffect } from "react";
+import Saboteur from "../layout/classImgs/saboteurThumb.png";
 
 const Character = ({ char }) => {
   console.log(char.character);
+
+  const setClassImg = () => {};
   return (
     <Fragment>
       <div className="card grid-2">

@@ -18,7 +18,7 @@ const Characters = () => {
   return (
     <div>
       {chars.map(char => (
-        <CharacterItem char={char} />
+        <CharacterItem key={char.rank} char={char} />
       ))}
     </div>
   );
