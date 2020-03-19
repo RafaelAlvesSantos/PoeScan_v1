@@ -1,15 +1,14 @@
-import React, { Fragment, useEffect } from "react";
-import Saboteur from "../layout/classImgs/saboteurThumb.png";
+import React, { Fragment } from "react";
+import ImgThumb from "../layout/classImgs/ImgThumb";
 
 const Character = ({ char }) => {
   console.log(char.character);
 
-  const setClassImg = () => {};
   return (
     <Fragment>
       <div className="card grid-2">
         <div className="all-center">
-          <img src={Saboteur} className="" alt="" style={{ width: "150px" }} />
+          <ImgThumb thumbnail={char.character.class} />
           <h2>{char.character.name}</h2>
           <p>Level: {char.character.level} </p>
         </div>

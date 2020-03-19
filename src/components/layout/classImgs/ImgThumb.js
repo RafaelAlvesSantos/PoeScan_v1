@@ -1,19 +1,16 @@
-import React, { Fragment, useEffect } from "react";
+import React, { Fragment } from "react";
 import Saboteur from "./saboteurThumb.png";
 
 const ImgThumb = props => {
-  const img = "";
-  useEffect(() => {
-    setImgThumb();
-    //eslint-disable-next-line
-  }, []);
+  let img = props.thumbnail;
 
-  const setImgThumb = () => {
-    switch (props.class) {
-      case "Deadeye":
-        img = Saboteur;
-    }
-  };
+  switch (props.thumbnail) {
+    case "Deadeye":
+      img = Saboteur;
+      break;
+    default:
+      img = "";
+  }
 
   return (
     <Fragment>
