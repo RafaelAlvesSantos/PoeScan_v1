@@ -1,21 +1,7 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React from "react";
 import CharacterItem from "../characters/CharacterItem";
 
-const Characters = () => {
-  const [chars, setChars] = useState([]);
-  useEffect(() => {
-    getCharacterLadder();
-    //eslint-disable-next-line
-  }, []);
-
-  const getCharacterLadder = async () => {
-    const res = await axios.get(
-      "http://api.pathofexile.com/ladders/Delirium?limit=10"
-    );
-    setChars(res.data.entries);
-  };
-
+const Characters = ({ chars }) => {
   return (
     <div>
       {chars.map(char => (
