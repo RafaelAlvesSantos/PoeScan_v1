@@ -14,7 +14,7 @@ const Character = ({ char }) => {
       <div className="card grid-3">
         <div className="all-center">
           <ImgThumb thumbnail={char.character.class} />
-          <p>Level: {char.character.level} </p>
+          <h3>Level: {char.character.level} </h3>
           <h4>{char.character.name}</h4>
         </div>
         <div>
@@ -27,7 +27,7 @@ const Character = ({ char }) => {
         </div>
         <div>
           <Fragment>
-            <p>Challenges: {depth}</p>
+            <p>Depth: {depth}</p>
           </Fragment>
         </div>
       </div>

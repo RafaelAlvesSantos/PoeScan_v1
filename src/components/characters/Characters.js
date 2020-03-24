@@ -15,6 +15,7 @@ const Characters = () => {
     );
     setChars(res.data.entries);
   };
+
   return (
     <div>
       {chars.map(char => (
