@@ -3,6 +3,11 @@ import ImgThumb from "../layout/classImgs/ImgThumb";
 
 const Character = ({ char }) => {
   console.log(char.character);
+  let depth = 0;
+  if (!char.character.depth) depth = 0;
+  else {
+    depth = char.character.depth.default;
+  }
 
   return (
     <Fragment>
@@ -22,7 +27,7 @@ const Character = ({ char }) => {
         </div>
         <div>
           <Fragment>
-            <p>Challenges: {char.account.challenges.total}</p>
+            <p>Challenges: {depth}</p>
           </Fragment>
         </div>
       </div>

@@ -190,6 +190,10 @@ img {
   grid-gap: 1rem;
 }
 
+.grid-3:hover {
+  background-color: gray;
+}
+
 .grid-4 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
